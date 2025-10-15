@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/matheart/Desktop/code/NEUQ-ACM-Weekly/202412689-孟靖凯/C,C++文件/模板/output/二叉树"
+relocations:
+  - { offset: 0x16D06, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x64F9D, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x17001, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x178, symBinAddr: 0x100003C30, symSize: 0x150 }
+  - { offset: 0x1702F, size: 0x8, addend: 0x0, symName: __Z9postorderP4Tree, symObjAddr: 0x10C, symBinAddr: 0x100003BC4, symSize: 0x6C }
+  - { offset: 0x1705D, size: 0x8, addend: 0x0, symName: __Z7inorderP4Tree, symObjAddr: 0xA0, symBinAddr: 0x100003B58, symSize: 0x6C }
+  - { offset: 0x1708B, size: 0x8, addend: 0x0, symName: __Z8preorderP4Tree, symObjAddr: 0x34, symBinAddr: 0x100003AEC, symSize: 0x6C }
+  - { offset: 0x170DA, size: 0x8, addend: 0x0, symName: __ZN4TreeC1Ei, symObjAddr: 0x0, symBinAddr: 0x100003AB8, symSize: 0x34 }
+...

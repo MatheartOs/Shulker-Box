@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/matheart/Desktop/code/NEUQ-ACM-Weekly/202412689-孟靖凯/C,C++文件/output/P4980 【模板】Pólya 定理"
+relocations:
+  - { offset: 0x16D23, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x65281, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x16E20, size: 0x8, addend: 0x0, symName: __ZL3mod, symObjAddr: 0x4F0, symBinAddr: 0x100003EC0, symSize: 0x0 }
+  - { offset: 0x16FDD, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x230, symBinAddr: 0x100003B4C, symSize: 0x2C0 }
+  - { offset: 0x170B1, size: 0x8, addend: 0x0, symName: __Z3phix, symObjAddr: 0xF0, symBinAddr: 0x100003A0C, symSize: 0x140 }
+  - { offset: 0x17113, size: 0x8, addend: 0x0, symName: __Z4fpowxx, symObjAddr: 0x0, symBinAddr: 0x10000391C, symSize: 0xF0 }
+...

@@ -1,0 +1,248 @@
+#include<cstdio>
+#include<cstring>
+
+const int p=62000001,q=9999;
+unsigned long long ak[p+q];
+unsigned long long bk[p+q];
+int al[p+q],bl[p+q],as[p+q],bs[p+q];
+int n,h,i,j,k,r,t,br[24],m,s,u,v,y;
+unsigned long long x, w;
+
+void ad(int d)
+{
+        if(j>n-2)
+        {
+                if(br[n+1]>1)return;
+                br[n+1]=0;
+        }
+        if(d>1)
+        {
+                for(k=1;k<n+2;k++)
+                        if(br[k]>1)return;
+                k=al[h]+1;
+                r=as[h];
+                if(k==m)s+=r;
+                if(k>m)m=k,s=r;
+                return;
+        }
+        w=1,x=0,y=al[h]+d;
+        for(k=1;k<n+2;k++,w*=5)
+                x+=w*br[k];
+        for(k=int(x%p);bl[k];k++)
+                if(x==bk[k])
+                {
+                        if(y<bl[k])return;
+                        if(y>bl[k])bs[k]=0;
+                        break;
+                }
+        if(!bl[k])u++,bs[k]=0,bk[k]=x;
+        bl[k]=y;
+        bs[k]+=as[h];
+}
+
+int gp(int p)
+{
+        if(br[p]==3)
+                for(k=0;;p++)
+                {
+                        if(br[p]==3)k++;
+                        if(br[p]==4)
+                        {
+                                k--;
+                                if(!k)return p;
+                        }
+                }
+        if(br[p]==4)
+                for(k=0;;p--)
+                {
+                        if(br[p]==4)k++;
+                        if(br[p]==3)
+                        {
+                                k--;
+                                if(!k)return p;
+                        }
+                }
+        return p;
+}
+
+void go(int s)
+{
+        if(s==0)
+        {
+                ad(0);
+                if(!i&&!j||i>n-2&&j>n-2)
+                {
+                        br[j+1]=1;
+                        br[j+2]=2;
+                        ad(1);
+                        br[j+1]=2;
+                        br[j+2]=1;
+                        ad(1);
+                }
+                br[j+1]=3;
+                br[j+2]=4;
+                ad(1);
+                return;
+        }
+        if(s==25||s==6||s==31||s==7||s==32||s==8||s==33||s==9||s==34)
+        {
+                br[j+1]=0;
+                br[j+2]=0;
+                ad(0);
+                return;
+        }
+        if(s==50)
+        {
+                br[j+1]=1;
+                ad(1);
+                br[j+1]=2;
+                br[j+2]=1;
+                ad(1);
+                if(!i&&!j||i>n-2&&j>n-2)
+                {
+                        br[j+1]=1;
+                        ad(2);
+                }
+                return;
+        }
+        if(s==75||s==100)
+        {
+                br[j+1]=1;
+                ad(1);
+                br[j+1]=s/25;
+                br[j+2]=1;
+                ad(1);
+                if(!i&&!j||i>n-2&&j>n-2)
+                {
+                        br[gp(j+1)]=2;
+                        br[j+1]=1;
+                        br[j+2]=1;
+                        ad(1);
+                }
+                return;
+        }
+        if(s==11)
+        {
+                if(!i&&!j||i>n-2&&j>n-2)
+                {
+                        br[j+1]=1;
+                        br[j+2]=1;
+                        ad(2);
+                }
+                br[j+1]=1;
+                br[j+2]=2;
+                ad(1);
+                br[j+1]=2;
+                br[j+2]=1;
+                ad(1);
+                return;
+        }
+        if(s==61)
+        {
+                br[j+1]=1;
+                br[j+2]=1;
+                ad(2);
+                return;
+        }
+        if(s==86||s==111)
+        {
+                br[gp(j+2)]=2;
+                br[j+1]=1;
+                br[j+2]=1;
+                ad(1);
+                return;
+        }
+        if(s==16||s==21)
+        {
+                br[j+2]=1;
+                ad(1);
+                br[j+1]=1;
+                br[j+2]=s/5;
+                ad(1);
+                if(!i&&!j||i>n-2&&j>n-2)
+                {
+                        br[j+1]=s/5;
+                        br[j+2]=1;
+                        br[gp(j+1)]=2;
+                        br[j+1]=1;
+                        ad(1);
+                }
+                return;
+        }
+        if(s==66||s==71)
+        {
+                br[gp(j+1)]=2;
+                br[j+1]=1;
+                br[j+2]=1;
+                ad(1);
+                return;
+        }
+        if(s==91||s==96||s==121)
+        {
+                if(s==91)br[gp(j+2)]=3;
+                if(s==121)br[gp(j+1)]=4;
+                br[j+1]=1;
+                br[j+2]=1;
+                ad(1);
+                return;
+        }
+        if(s==23)
+        {
+                br[j+1]=1;
+                br[j+2]=4;
+                ad(1);
+                if(!i&&!j||i>n-2&&j>n-2)
+                {
+                        br[j]=2;
+                        br[j+1]=1;
+                        br[j+2]=1;
+                        ad(1);
+                }
+                return;
+        }
+        if(s==73||s==98||s==123)
+        {
+                br[j]=s/25;
+                br[j+1]=1;
+                br[j+2]=1;
+                ad(1);
+                return;
+        }
+}
+
+int main()
+{
+        for(n=2;n<20;n++)
+        {
+                memset(al,0,sizeof(al));
+                al[0]=1;
+                as[0]=1;
+                for(i=0;i<n;i++)
+                {
+                        for(j=0;j<n;j++)
+                        {
+                                for(u=h=0;h<p;h++)
+                                        if(al[h])
+                                        {
+                                                x=ak[h];
+                                                for(t=0,k=1;k<n+2;x/=5)
+                                                {
+                                                        br[k]=int(x%5);
+                                                        if(br[k++]==2)t++;
+                                                }
+                                                go(br[j]+br[j+1]*5+br[j+2]*25);
+                                        }
+                                if(u>v)v=u;
+                                printf("%d %d %c",i,j,13);
+                                memcpy(ak,bk,sizeof(ak));
+                                memcpy(al,bl,sizeof(al));
+                                memcpy(as,bs,sizeof(as));
+                                memset(bl,0,sizeof(bl));
+                        }
+                        for(h=0;h<p;h++)
+                                ak[h]*=5;
+                }
+                printf("n=%d: length=%d, ways=%d, status=%d\n",n,m-1,s,v);
+        }
+        return 0;
+}

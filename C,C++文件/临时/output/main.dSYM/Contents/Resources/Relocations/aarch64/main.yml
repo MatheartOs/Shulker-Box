@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/matheart/Desktop/code/NEUQ-ACM-Weekly/202412689-孟靖凯/C,C++文件/临时/output/main"
+relocations:
+  - { offset: 0x19, size: 0x8, addend: 0x0, symName: __Z10createNodei, symObjAddr: 0x0, symBinAddr: 0x100003B30, symSize: 0x38 }
+  - { offset: 0x78A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1D0, symBinAddr: 0x100003D00, symSize: 0x150 }
+  - { offset: 0x7DC, size: 0x8, addend: 0x0, symName: __Z8freeListP4Node, symObjAddr: 0x180, symBinAddr: 0x100003CB0, symSize: 0x50 }
+  - { offset: 0x828, size: 0x8, addend: 0x0, symName: __Z9printListP4Node, symObjAddr: 0x118, symBinAddr: 0x100003C48, symSize: 0x68 }
+  - { offset: 0x869, size: 0x8, addend: 0x0, symName: __Z11addTwoListsP4NodeS0_, symObjAddr: 0x38, symBinAddr: 0x100003B68, symSize: 0xE0 }
+  - { offset: 0x8E9, size: 0x8, addend: 0x0, symName: __Z10createNodei, symObjAddr: 0x0, symBinAddr: 0x100003B30, symSize: 0x38 }
+...

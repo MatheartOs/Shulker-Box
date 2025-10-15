@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/matheart/Desktop/code/NEUQ-ACM-Weekly/202412689-孟靖凯/C,C++文件/数据结构作业/output/好玩的约瑟夫环"
+relocations:
+  - { offset: 0x517A, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x17153, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0x53E2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x368, symBinAddr: 0x100003B14, symSize: 0x144 }
+  - { offset: 0x546C, size: 0x8, addend: 0x0, symName: __ZN11CJosephRing7RunGameEiRS_, symObjAddr: 0x254, symBinAddr: 0x100003A00, symSize: 0x114 }
+  - { offset: 0x54F6, size: 0x8, addend: 0x0, symName: __ZN11CJosephRing6AppendEi, symObjAddr: 0x1C8, symBinAddr: 0x100003974, symSize: 0x8C }
+  - { offset: 0x553E, size: 0x8, addend: 0x0, symName: __ZN11CJosephRing6_ClearEv, symObjAddr: 0x12C, symBinAddr: 0x1000038D8, symSize: 0x9C }
+  - { offset: 0x5589, size: 0x8, addend: 0x0, symName: __ZNK11CJosephRing7DisplayEv, symObjAddr: 0x88, symBinAddr: 0x100003834, symSize: 0xA4 }
+  - { offset: 0x55EC, size: 0x8, addend: 0x0, symName: __ZN11CJosephRingC1Ev, symObjAddr: 0x6C, symBinAddr: 0x100003818, symSize: 0x1C }
+  - { offset: 0x5614, size: 0x8, addend: 0x0, symName: __ZN11CJosephRingC2Ev, symObjAddr: 0x50, symBinAddr: 0x1000037FC, symSize: 0x1C }
+  - { offset: 0x5659, size: 0x8, addend: 0x0, symName: __ZN11CJosephRingD1Ev, symObjAddr: 0x30, symBinAddr: 0x1000037DC, symSize: 0x20 }
+  - { offset: 0x5688, size: 0x8, addend: 0x0, symName: __ZNSt8ios_base5widthEl, symObjAddr: 0x0, symBinAddr: 0x1000037AC, symSize: 0x30 }
+...
